@@ -1,0 +1,1961 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Aptis B1 Grammar & Vocabulary Master</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-light: #eef2ff;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --danger: #ef4444;
+      --danger-light: #fee2e2;
+      --warning: #f59e0b;
+      --warning-light: #fef3c7;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 16px;
+      --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+    }
+
+    [data-theme="dark"] {
+      --primary: #6366f1;
+      --primary-hover: #818cf8;
+      --primary-light: #1e1b4b;
+      --success: #10b981;
+      --success-light: #064e3b;
+      --danger: #ef4444;
+      --danger-light: #7f1d1d;
+      --warning: #f59e0b;
+      --warning-light: #78350f;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .brand-badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+    }
+
+    .header-controls { display: flex; align-items: center; gap: 6px; }
+
+    .icon-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 11px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s;
+    }
+
+    .icon-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .icon-btn.active { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
+
+    main { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 16px; }
+
+    .control-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .control-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+
+    select {
+      flex: 1;
+      min-width: 220px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .mode-tabs {
+      display: flex;
+      background: var(--bg);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .mode-tab {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .mode-tab.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+    }
+
+    .filter-pills { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+
+    .pill {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .pill.active { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+
+    .status-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .progress-track { flex: 1; height: 8px; background: var(--border); border-radius: 999px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); border-radius: 999px; transition: width 0.3s ease; }
+
+    .timer-badge {
+      background: var(--warning-light);
+      color: var(--warning);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    .q-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+    .q-tags { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .badge { font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase; }
+    .badge-grammar { background: #e0e7ff; color: #4338ca; }
+    .badge-vocab { background: #fce7f3; color: #be185d; }
+    [data-theme="dark"] .badge-grammar { background: #312e81; color: #c7d2fe; }
+    [data-theme="dark"] .badge-vocab { background: #831843; color: #fbcfe8; }
+
+    .q-instruction {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 8px 12px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      border-left: 3px solid var(--primary);
+    }
+
+    .q-prompt-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    .q-prompt { font-size: 1.15rem; font-weight: 700; color: var(--text); line-height: 1.45; }
+
+    .speak-btn {
+      background: var(--primary-light);
+      color: var(--primary);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .options-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .options-grid.compact { grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); }
+
+    .opt-btn {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      color: var(--text);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.15s;
+    }
+
+    .opt-btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-light); }
+
+    .opt-key {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .opt-btn.selected { border-color: var(--primary); background: var(--primary-light); }
+    .opt-btn.selected .opt-key { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    .opt-btn.correct { border-color: var(--success); background: var(--success-light); color: var(--text); }
+    .opt-btn.correct .opt-key { background: var(--success); color: #fff; border-color: var(--success); }
+
+    .opt-btn.wrong { border-color: var(--danger); background: var(--danger-light); color: var(--text); }
+    .opt-btn.wrong .opt-key { background: var(--danger); color: #fff; border-color: var(--danger); }
+
+    .exp-box {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .exp-header { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 0.92rem; margin-bottom: 6px; }
+    .exp-header.correct { color: var(--success); }
+    .exp-header.wrong { color: var(--danger); }
+    .exp-text { font-size: 0.92rem; color: var(--text); line-height: 1.5; }
+
+    .srs-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .srs-btn {
+      flex: 1;
+      min-width: 90px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .srs-btn.hard { border-bottom: 3px solid var(--danger); }
+    .srs-btn.good { border-bottom: 3px solid var(--warning); }
+    .srs-btn.easy { border-bottom: 3px solid var(--success); }
+
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 20px; }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-secondary { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); }
+    .btn-danger { background: var(--danger); color: #fff; }
+
+    .palette-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+    .palette-title { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 10px; display: flex; justify-content: space-between; }
+    .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); gap: 6px; }
+
+    .p-dot {
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .p-dot.current { border: 2px solid var(--primary); color: var(--primary); font-weight: 900; }
+    .p-dot.answered { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+    .p-dot.correct { background: var(--success); color: #fff; border-color: var(--success); }
+    .p-dot.wrong { background: var(--danger); color: #fff; border-color: var(--danger); }
+
+    .flashcard {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      min-height: 260px;
+      padding: 28px 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 16px;
+      user-select: none;
+    }
+    .fc-answer { font-size: 1.35rem; font-weight: 800; color: var(--success); margin: 12px 0; }
+    .fc-hint { font-size: 0.8rem; color: var(--text-muted); margin-top: 14px; font-weight: 600; }
+
+    .summary-banner {
+      background: linear-gradient(135deg, var(--primary), #6366f1);
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .summary-score { font-size: 1.8rem; font-weight: 900; }
+
+    @media (max-width: 600px) {
+      .q-prompt { font-size: 1.05rem; }
+      .card { padding: 16px; }
+      .mode-tabs { width: 100%; }
+      .mode-tab { flex: 1; text-align: center; padding: 8px 4px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand" onclick="app.resetToFirst()">
+      <span class="brand-badge">APTIS B1</span>
+      <span>Grammar & Vocab Master</span>
+    </div>
+    <div class="header-controls">
+      <button class="icon-btn" id="btnAutoSpeak" onclick="app.toggleAutoSpeak()">
+        🔊 <span id="lblAutoSpeak">Auto-Read: Tắt</span>
+      </button>
+      <button class="icon-btn active" id="btnSound" onclick="app.toggleSound()">
+        🎵 <span id="lblSound">SFX: Bật</span>
+      </button>
+      <button class="icon-btn" onclick="app.toggleTheme()">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="control-bar">
+    <div class="control-row">
+      <select id="testSelect" onchange="app.selectTest(this.value)"></select>
+      <div class="mode-tabs">
+        <button class="mode-tab active" data-mode="practice" onclick="app.setMode('practice')">🎯 Luyện tập</button>
+        <button class="mode-tab" data-mode="exam" onclick="app.setMode('exam')">⏱️ Thi thử</button>
+        <button class="mode-tab" data-mode="flashcard" onclick="app.setMode('flashcard')">🗂️ Flashcard</button>
+        <button class="mode-tab" data-mode="review" onclick="app.setMode('review')">🔥 Cần ôn (<span id="mistakeCount">0</span>)</button>
+      </div>
+    </div>
+
+    <div class="control-row">
+      <div class="filter-pills">
+        <button class="pill active" data-sec="all" onclick="app.setSection('all')">Tất cả (50 câu)</button>
+        <button class="pill" data-sec="grammar" onclick="app.setSection('grammar')">A. Grammar (1–25)</button>
+        <button class="pill" data-sec="vocab" onclick="app.setSection('vocab')">B. Vocabulary (26–50)</button>
+      </div>
+      <button class="icon-btn" onclick="app.resetCurrentProgress()">🔄 Làm lại đề này</button>
+    </div>
+  </div>
+
+  <div id="appViewport"></div>
+</main>
+
+<script>
+/* ==========================================================================
+   1. FULL DATABASE: 10 TESTS x 50 QUESTIONS = 500 ITEMS
+   Format:
+   grammar: [ [prompt, "optA|optB|optC", correctIdx, explanation], ... ]
+   vocabGroups: [ { t: title, o: "opt0|opt1|...", q: [ [qNum, prompt, ansIdx, exp], ... ] } ]
+   ========================================================================== */
+const DB = [
+  // 1. PRACTICE TEST 01
+  {
+    id: "practice_01",
+    title: "PRACTICE TEST 01 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["My sister _____ in Hanoi since 2020.", "has lived|lives|lived", 0, "“Since 2020” chỉ mốc thời gian bắt đầu trong quá khứ kéo dài đến hiện tại -> Hiện tại hoàn thành: has lived."],
+      ["I forgot _____ the door before I left home.", "locking|to lock|lock", 1, "Forget to do something: quên phải làm việc gì -> dùng to lock."],
+      ["This is the hotel _____ we stayed last year.", "where|which|who", 0, "“Hotel” là nơi chốn và mệnh đề sau nói về nơi đã ở -> dùng trạng từ quan hệ where."],
+      ["There isn’t _____ milk left in the fridge.", "many|much|a few", 1, "“Milk” là danh từ không đếm được -> dùng much trong câu phủ định."],
+      ["By next Friday, we _____ the project.", "will finish|will have finished|finish", 1, "“By next Friday” nhấn mạnh hành động hoàn tất trước một thời điểm tương lai -> will have finished."],
+      ["She speaks English _____ than me.", "good|better|best", 1, "Có “than” -> dùng so sánh hơn. Better là so sánh hơn của trạng từ well bổ nghĩa cho speaks."],
+      ["You _____ smoke in the hospital.", "mustn’t|don’t have to|needn’t", 0, "Trong bệnh viện, hút thuốc bị cấm -> dùng mustn't (cấm đoán mạnh)."],
+      ["The phone rang while I _____ dinner.", "cooked|was cooking|cook", 1, "Hành động đang diễn ra trong quá khứ (was cooking) thì có hành động khác xen vào (rang)."],
+      ["I wish I _____ more free time.", "have|had|will have", 1, "Câu ước trái với hiện tại: wish + S + V quá khứ đơn (had)."],
+      ["The report _____ by the manager yesterday.", "was checked|checked|is checking", 0, "Chủ ngữ “the report” bị động + “yesterday” -> bị động quá khứ đơn: was checked."],
+      ["Neither Tom nor his friends _____ coming to the party.", "is|are|be", 1, "Cấu trúc neither…nor… chia động từ theo chủ ngữ gần nhất (“his friends” số nhiều -> are)."],
+      ["They decided _____ a new flat.", "buy|buying|to buy", 2, "Sau decide dùng to-infinitive: decide to buy."],
+      ["She asked me where I _____.", "live|lived|do live", 1, "Câu hỏi gián tiếp trong câu tường thuật: giữ trật tự câu khẳng định và lùi thì -> lived."],
+      ["I’m used to _____ early every day.", "get up|getting up|got up", 1, "Be used to + V-ing: quen với việc gì -> getting up."],
+      ["It’s the first time I _____ sushi.", "try|tried|have tried", 2, "Cấu trúc It’s the first time + S + have/has + V3/ed -> have tried."],
+      ["He is interested _____ photography.", "in|on|at", 0, "Cụm tính từ be interested in: quan tâm, hứng thú với điều gì."],
+      ["If it rains tomorrow, we _____ at home.", "stay|stayed|will stay", 2, "Câu điều kiện loại 1: If + hiện tại đơn, will + V nguyên mẫu -> will stay."],
+      ["I met a man _____ brother works with you.", "whose|who|which", 0, "Đại từ quan hệ chỉ sở hữu (người đàn ông có anh/em trai) -> whose."],
+      ["The film was _____ boring that I fell asleep.", "such|so|too", 1, "Cấu trúc so + adjective + that: so boring that..."],
+      ["She doesn’t like coffee, _____?", "does she|doesn’t she|is she", 0, "Câu hỏi đuôi: mệnh đề chính phủ định (doesn't) -> đuôi khẳng định: does she?"],
+      ["We have _____ finished our homework.", "yet|already|still", 1, "Câu khẳng định ở hiện tại hoàn thành dùng already (đã hoàn thành rồi)."],
+      ["I prefer tea _____ coffee.", "than|from|to", 2, "Cấu trúc thích cái gì hơn cái gì: prefer A to B."],
+      ["He made me _____ until midnight.", "work|to work|working", 0, "Cấu trúc chủ động: make someone + V nguyên mẫu không to -> work."],
+      ["The train _____ at 7 p.m. tomorrow.", "leaves|will leaving|is leave", 0, "Lịch trình cố định của tàu xe dùng thì hiện tại đơn: leaves."],
+      ["The book, _____ I borrowed from Mai, is excellent.", "who|which|where", 1, "“The book” chỉ vật trong mệnh đề quan hệ không xác định (có dấu phẩy) -> which."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "conceal|buy|decline|set up|support|disclose|increase|hesitate|decrease|estimate|avoid",
+        q: [
+          [26, "establish", 3, "establish = set up (thành lập, thiết lập)"],
+          [27, "purchase", 1, "purchase = buy (mua)"],
+          [28, "reveal", 5, "reveal = disclose (tiết lộ)"],
+          [29, "reduce", 8, "reduce = decrease (giảm)"],
+          [30, "assist", 4, "assist = support (hỗ trợ)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "convince|delay|examine|refuse|collapse|heal|decorate|borrow|mention|divide",
+        q: [
+          [31, "To persuade someone is to...", 0, "persuade = convince (thuyết phục)"],
+          [32, "To postpone something is to...", 1, "postpone = delay (trì hoãn)"],
+          [33, "To inspect something is to...", 2, "inspect = examine (kiểm tra kỹ)"],
+          [34, "To reject something is to...", 3, "reject = refuse (từ chối)"],
+          [35, "To recover is to...", 5, "recover = heal (hồi phục)"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "flexible|enormous|incredible|vague|meticulous|vital|wealthy|reluctant|miserable|ordinary|shallow",
+        q: [
+          [36, "Extremely important.", 5, "vital = cực kỳ quan trọng"],
+          [37, "Able to change to suit different conditions.", 0, "flexible = linh hoạt, có khả năng thích nghi"],
+          [38, "Difficult to believe.", 2, "incredible = khó tin"],
+          [39, "Done with great care and attention.", 4, "meticulous = tỉ mỉ, kỹ lưỡng"],
+          [40, "Very unhappy or uncomfortable.", 8, "miserable = khổ sở, rất không vui"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "account|complaint|equipment|investment|maintenance|sample|tension|border|shelter|target",
+        q: [
+          [41, "The lawyer asked the witness to give a clear _____ of events.", 0, "a clear account of events = bản tường thuật rõ ràng về sự việc"],
+          [42, "The company made a huge _____ in new equipment.", 3, "make an investment = thực hiện một khoản đầu tư"],
+          [43, "The old bridge was closed for _____ after the storm.", 4, "closed for maintenance = đóng cửa để bảo trì"],
+          [44, "His rude comment caused a lot of _____ among staff.", 6, "cause tension = gây căng thẳng"],
+          [45, "The scientist collected a small _____ of water.", 5, "a sample of water = một mẫu nước"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "growth|mistake|respect|traffic|failure|regulations|evidence|disappointment|habit",
+        q: [
+          [46, "heavy + _____", 3, "heavy traffic = giao thông đông đúc, ùn tắc"],
+          [47, "strict + _____", 5, "strict regulations = các quy định nghiêm ngặt"],
+          [48, "bitter + _____", 7, "bitter disappointment = sự thất vọng sâu sắc, cay đắng"],
+          [49, "mutual + _____", 2, "mutual respect = sự tôn trọng lẫn nhau"],
+          [50, "rapid + _____", 0, "rapid growth = sự tăng trưởng nhanh"]
+        ]
+      }
+    ]
+  },
+
+  // 2. PRACTICE TEST 02
+  {
+    id: "practice_02",
+    title: "PRACTICE TEST 02 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["Do you know ____ this word means?", "what|which|who", 0, "Câu hỏi gián tiếp: what nghĩa là “cái gì” làm tân ngữ của means."],
+      ["We ____ go out; there's plenty of food at home.", "mustn't|don't have to|couldn't", 1, "Don't have to: không cần thiết phải làm gì."],
+      ["She has been working here ____ three years.", "since|for|during", 1, "For + khoảng thời gian (“three years”)."],
+      ["I'll send you the file as soon as I ____ it.", "finish|will finish|finished", 0, "Mệnh đề thời gian với as soon as chỉ tương lai dùng hiện tại đơn: finish."],
+      ["They are looking forward to ____ you.", "meet|meeting|met", 1, "Look forward to + V-ing -> meeting."],
+      ["This box is ____ heavy to carry.", "enough|too|such", 1, "Cấu trúc too + adj + to-V (quá... để làm gì) -> too heavy to carry."],
+      ["If I were you, I ____ apologize.", "will|would|can", 1, "Câu điều kiện loại 2: If I were you, I would + V."],
+      ["The letters ____ every morning.", "deliver|are delivered|delivered", 1, "Bị động ở hiện tại đơn (every morning) -> are delivered."],
+      ["He denied ____ the window.", "broke|to break|breaking", 2, "Sau deny dùng V-ing -> breaking."],
+      ["There were only ____ people at the meeting.", "a few|much|any", 0, "“People” là danh từ đếm được số nhiều -> dùng a few (một vài)."],
+      ["A: Where is Lisa? B: She ____ be in her room; the light is on.", "must|can't|needn't", 0, "Suy đoán chắc chắn có căn cứ ở hiện tại (đèn đang bật) -> must."],
+      ["I haven't seen him ____ Monday.", "for|since|at", 1, "Since + mốc thời gian (“Monday”)."],
+      ["They asked us ____ late.", "not to be|don't be|not be", 0, "Cấu trúc ask someone not to do something -> not to be."],
+      ["The restaurant ____ we had lunch was very cheap.", "who|where|which", 1, "Trạng từ quan hệ chỉ nơi chốn -> where."],
+      ["I'd rather ____ at home tonight.", "stay|to stay|staying", 0, "Would rather + V nguyên mẫu không to -> stay."],
+      ["She can't come because she ____ her leg.", "has broken|broke|was breaking", 0, "Hành động vừa xảy ra để lại kết quả ở hiện tại (không đến được) -> has broken."],
+      ["The more you practise, the ____ you become.", "good|better|best", 1, "So sánh kép: The + comparative, the + comparative -> better."],
+      ["I'm not tall enough ____ the shelf.", "reach|reaching|to reach", 2, "Adjective + enough + to-infinitive -> to reach."],
+      ["He used to ____ tennis every weekend.", "play|playing|played", 0, "Used to + V nguyên mẫu (thói quen trong quá khứ) -> play."],
+      ["I have my hair ____ every month.", "cut|cutting|to cut", 0, "Cầu khiến bị động: have something done (V3/ed) -> cut."],
+      ["This is ____ useful advice.", "a|an|(-)", 2, "Advice là danh từ không đếm được -> không dùng mạo từ a/an."],
+      ["We arrived late ____ the traffic.", "because|because of|although", 1, "Because of + cụm danh từ (“the traffic”)."],
+      ["She said she ____ call me later.", "would|will|is going", 0, "Câu tường thuật lùi thì will -> would."],
+      ["The teacher told us ____ carefully.", "listening|listen|to listen", 2, "Tell someone to do something -> to listen."],
+      ["I don't know anyone ____ can fix this computer.", "which|who|where", 1, "Đại từ quan hệ chỉ người làm chủ ngữ -> who."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "trick|keep|explain|desert|allow|predict|punish|collect|refuse|repair|admire",
+        q: [
+          [26, "abandon", 3, "abandon = desert (từ bỏ, bỏ lại)"],
+          [27, "clarify", 2, "clarify = explain (làm rõ, giải thích rõ)"],
+          [28, "retain", 1, "retain = keep (giữ lại, duy trì)"],
+          [29, "permit", 4, "permit = allow (cho phép)"],
+          [30, "deceive", 0, "deceive = trick (lừa dối, đánh lừa)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "concern|challenge|instruct|appear|worry|obtain|wish|compensate|assure|approve",
+        q: [
+          [31, "To oppose someone is to...", 1, "challenge = phản đối, thách thức"],
+          [32, "To teach someone is to...", 2, "instruct = hướng dẫn, chỉ dạy"],
+          [33, "To accept something is to...", 9, "approve = chấp thuận, đồng ý"],
+          [34, "To get something is to...", 5, "obtain = có được, đạt được"],
+          [35, "To pay someone is to...", 7, "compensate = bồi thường, trả tiền đền bù"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "ancient|casual|exhausted|hazardous|honest|limited|spontaneous|stubborn|cheerful|vacant|precise",
+        q: [
+          [36, "Very old or from the distant past.", 0, "ancient = cổ xưa, thuộc thời xa xưa"],
+          [37, "Not willing to change your opinion.", 7, "stubborn = bướng bỉnh, cứng đầu"],
+          [38, "Full of danger.", 3, "hazardous = nguy hiểm, đầy rủi ro"],
+          [39, "Done without planning.", 6, "spontaneous = tự phát, không chuẩn bị trước"],
+          [40, "Extremely tired.", 2, "exhausted = kiệt sức, cực kỳ mệt"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "evidence|refund|envelope|fault|bypass|curtain|recipe|luggage|lecture|motel",
+        q: [
+          [41, "The hotel gave us a full _____ because the room was dirty.", 1, "a full refund = hoàn lại toàn bộ tiền"],
+          [42, "The police found no _____ linking him to the crime.", 0, "evidence = bằng chứng"],
+          [43, "She wrote the address on the _____ before posting the letter.", 2, "envelope = phong bì"],
+          [44, "The machine broke down because of a small _____ in the engine.", 3, "a fault in the engine = một lỗi/hỏng hóc trong động cơ"],
+          [45, "The city built a new _____ to reduce traffic jams.", 4, "bypass = đường tránh giảm ùn tắc"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "intelligence|weather|increase|report|information|furniture|courage|medicine|route|accident",
+        q: [
+          [46, "annual + _____", 3, "annual report = báo cáo thường niên"],
+          [47, "severe + _____", 1, "severe weather = thời tiết khắc nghiệt"],
+          [48, "confidential + _____", 4, "confidential information = thông tin mật"],
+          [49, "significant + _____", 2, "significant increase = sự gia tăng đáng kể"],
+          [50, "artificial + _____", 0, "artificial intelligence = trí tuệ nhân tạo"]
+        ]
+      }
+    ]
+  },
+
+  // 3. PRACTICE TEST 03
+  {
+    id: "practice_03",
+    title: "PRACTICE TEST 03 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["Please turn ____ the lights when you leave.", "off|on|at", 0, "Turn off: tắt thiết bị, đèn điện."],
+      ["I have never ____ to Thailand.", "be|been|being", 1, "Hiện tại hoàn thành chỉ trải nghiệm: have never been to."],
+      ["She is the woman ____ car was stolen.", "whose|who|which", 0, "Đại từ quan hệ chỉ sở hữu -> whose car."],
+      ["There are ____ chairs for everyone.", "enough|too|such", 0, "Enough + noun: enough chairs."],
+      ["We won't start until everyone ____.", "arrives|will arrive|arrived", 0, "Mệnh đề thời gian với until dùng hiện tại đơn -> arrives."],
+      ["He suggested ____ a taxi.", "take|taking|to take", 1, "Suggest + V-ing -> taking."],
+      ["You look tired. You ____ take a break.", "should|mustn't|needn't", 0, "Should dùng để đưa ra lời khuyên."],
+      ["The cake tastes ____ delicious.", "very|many|much", 0, "Very bổ nghĩa cho tính từ delicious."],
+      ["They had finished dinner before I ____.", "arrive|arrived|had arrived", 1, "Before + quá khứ đơn (arrived), mệnh đề kia dùng quá khứ hoàn thành."],
+      ["The museum ____ opened in 1998.", "is|was|has", 1, "Bị động quá khứ đơn (in 1998) -> was opened."],
+      ["I'm afraid I have ____ money left.", "a little|few|many", 0, "“Money” không đếm được -> dùng a little."],
+      ["She works ____ than her brother.", "careful|more carefully|most carefully", 1, "Động từ works cần trạng từ so sánh hơn -> more carefully."],
+      ["Do you know how long ____?", "the film is|is the film|does the film", 0, "Câu hỏi gián tiếp dùng trật tự khẳng định: how long the film is."],
+      ["He promised ____ late again.", "not being|not to be|don't be", 1, "Promise not to do something -> not to be."],
+      ["I wish I ____ speak French fluently.", "can|could|will", 1, "Wish + could diễn tả mong muốn về khả năng ở hiện tại."],
+      ["They have lived here ____ they got married.", "since|for|during", 0, "Since + mệnh đề quá khứ đơn."],
+      ["This exercise is ____ than the last one.", "difficult|more difficult|most difficult", 1, "So sánh hơn của tính từ dài -> more difficult."],
+      ["The man ____ lives next door is a doctor.", "who|which|where", 0, "Who thay cho người làm chủ ngữ."],
+      ["I was made ____ the room after the party.", "clean|to clean|cleaning", 1, "Bị động của make: be made to do something -> to clean."],
+      ["There's someone at the door, ____?", "isn't there|is there|wasn't there", 0, "Câu hỏi đuôi của There is -> isn't there?"],
+      ["We need to find out ____ caused the problem.", "what|which|whose", 0, "What làm chủ ngữ của mệnh đề danh từ: what caused the problem."],
+      ["I don't mind ____ early.", "start|to start|starting", 2, "Mind + V-ing -> starting."],
+      ["If she had studied harder, she ____ passed the exam.", "would have|will have|had", 0, "Câu điều kiện loại 3: If + had V3, would have + V3."],
+      ["The road was closed ____ an accident.", "because|due to|although", 1, "Due to + cụm danh từ (“an accident”)."],
+      ["He has ____ visited London twice.", "yet|already|still", 1, "Already dùng trong câu khẳng định hiện tại hoàn thành."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "enlarge|endure|hide|begin|acquire|measure|destroy|blame|attach|celebrate|compare",
+        q: [
+          [26, "commence", 3, "commence = begin (bắt đầu)"],
+          [27, "conceal", 2, "conceal = hide (che giấu)"],
+          [28, "expand", 0, "expand = enlarge (mở rộng, làm lớn hơn)"],
+          [29, "obtain", 4, "obtain = acquire (có được, đạt được)"],
+          [30, "tolerate", 1, "tolerate = endure (chịu đựng)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "forecast|stress|remove|discuss terms|admire|blame|find fault|remain|cancel|pay",
+        q: [
+          [31, "To criticise someone is to...", 6, "find fault = chỉ trích, tìm lỗi"],
+          [32, "To negotiate is to...", 3, "discuss terms = thương lượng, thảo luận điều khoản"],
+          [33, "To withdraw something is to...", 2, "remove = rút lại, lấy đi"],
+          [34, "To predict something is to...", 0, "forecast = dự đoán"],
+          [35, "To emphasize something is to...", 1, "stress = nhấn mạnh"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "cautious|explicit|frequent|generous|harmful|insufficient|reliable|temporary|narrow|strict|graceful",
+        q: [
+          [36, "Not having enough of something.", 5, "insufficient = không đủ, thiếu"],
+          [37, "Clear and easy to understand.", 1, "explicit = rõ ràng, cụ thể"],
+          [38, "Able to be trusted.", 6, "reliable = đáng tin cậy"],
+          [39, "Happening often.", 2, "frequent = thường xuyên"],
+          [40, "Very careful to avoid danger.", 0, "cautious = thận trọng, cẩn thận"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "injury|delay|summary|regulations|campaign|receipt|basement|accent|harvest|bargain",
+        q: [
+          [41, "The factory had to follow strict safety _____.", 3, "safety regulations = các quy định an toàn"],
+          [42, "The athlete suffered a serious _____ during training.", 0, "a serious injury = một chấn thương nghiêm trọng"],
+          [43, "There was a long _____ before the train arrived.", 1, "a long delay = sự chậm trễ kéo dài"],
+          [44, "The article gives a brief _____ of the experiment.", 2, "a brief summary = bản tóm tắt ngắn gọn"],
+          [45, "The government launched a new _____ to reduce pollution.", 4, "a campaign = chiến dịch"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "support|decision|evidence|area|relationship|complaint|surface|engine|topic|damage",
+        q: [
+          [46, "remote + _____", 3, "remote area = vùng xa xôi, hẻo lánh"],
+          [47, "close + _____", 4, "close relationship = mối quan hệ thân thiết"],
+          [48, "strong + _____", 2, "strong evidence = bằng chứng vững chắc"],
+          [49, "financial + _____", 0, "financial support = hỗ trợ tài chính"],
+          [50, "final + _____", 1, "final decision = quyết định cuối cùng"]
+        ]
+      }
+    ]
+  },
+
+  // 4. PRACTICE TEST 04
+  {
+    id: "practice_04",
+    title: "PRACTICE TEST 04 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["I enjoy ____ in the morning.", "jog|jogging|to jog", 1, "Enjoy + V-ing -> jogging."],
+      ["This is the most interesting book I ____.", "ever read|have ever read|am ever reading", 1, "So sánh nhất kết hợp trải nghiệm dùng hiện tại hoàn thành -> have ever read."],
+      ["She was born ____ July.", "in|on|at", 0, "Với tháng dùng giới từ in: in July."],
+      ["I don't have ____ information about the course.", "many|much|few", 1, "Information không đếm được -> dùng much."],
+      ["The children were playing while their mother ____.", "cooked|was cooking|has cooked", 1, "Hai hành động diễn ra song song trong quá khứ -> was cooking."],
+      ["You ____ bring your passport; it is necessary.", "must|might|needn't", 0, "Must diễn tả sự cần thiết, bắt buộc."],
+      ["She ____ in this city for five years.", "lives|has lived|lived", 1, "For five years -> Hiện tại hoàn thành: has lived."],
+      ["He asked me if I ____ help him.", "can|could|will", 1, "Câu tường thuật lùi thì can -> could."],
+      ["It was ____ a nice day that we went swimming.", "so|such|too", 1, "Cấu trúc such + a/an + adj + noun + that."],
+      ["I'm thinking ____ moving to a bigger flat.", "of|at|with", 0, "Think of doing something: cân nhắc làm gì."],
+      ["If I ____ enough money, I would travel more.", "have|had|will have", 1, "Câu điều kiện loại 2: If + past simple (had)."],
+      ["The room ____ cleaned before the guests arrived.", "had been|has been|is being", 0, "Quá khứ hoàn thành bị động trước một mốc quá khứ -> had been cleaned."],
+      ["She is afraid ____ spiders.", "about|of|with", 1, "Be afraid of: sợ cái gì."],
+      ["I'll let you know when I ____ the answer.", "find|will find|found", 0, "Mệnh đề when chỉ tương lai dùng hiện tại đơn -> find."],
+      ["He didn't go to school ____ he was ill.", "because|although|despite", 0, "Because + mệnh đề chỉ nguyên nhân."],
+      ["There are two books here. Which one is ____?", "your|yours|you", 1, "Đại từ sở hữu đứng độc lập -> yours."],
+      ["The test was easier ____ I expected.", "as|than|from", 1, "So sánh hơn (easier) đi với than."],
+      ["They stopped ____ lunch at 1 p.m.", "have|having|to have", 2, "Stop to do something: dừng việc đang làm để ăn trưa -> to have."],
+      ["I'm not used to ____ in big cities.", "drive|driving|drove", 1, "Be used to + V-ing (quen với việc gì) -> driving."],
+      ["The woman ____ you met yesterday is my aunt.", "who|which|where", 0, "Who dùng cho người."],
+      ["He ____ be at home; his car isn't outside.", "can't|must|should", 0, "Suy đoán phủ định chắc chắn ở hiện tại -> can't."],
+      ["We haven't finished the work ____.", "already|yet|still", 1, "Yet dùng cuối câu phủ định hiện tại hoàn thành."],
+      ["I don't know ____ to do next.", "what|which|who", 0, "What to do: nên làm gì."],
+      ["She has been learning English ____ she was ten.", "for|since|during", 1, "Since + mốc/mệnh đề quá khứ đơn."],
+      ["By the time the police arrived, the thief ____.", "left|had left|was leaving", 1, "By the time + quá khứ đơn -> mệnh đề chính dùng quá khứ hoàn thành: had left."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "evaluate|appear|fix|reduce|maintain|interrupt|lend|cancel|imagine|separate|complain",
+        q: [
+          [26, "diminish", 3, "diminish = reduce (giảm, làm giảm)"],
+          [27, "emerge", 1, "emerge = appear (xuất hiện)"],
+          [28, "assess", 0, "assess = evaluate (đánh giá)"],
+          [29, "repair", 2, "repair = fix (sửa chữa)"],
+          [30, "preserve", 4, "preserve = maintain (duy trì, giữ gìn)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "motivate|substitute|blame|join|examine|escape|promise|ignore|measure|own",
+        q: [
+          [31, "To accuse someone is to...", 2, "blame = đổ lỗi, quy trách nhiệm"],
+          [32, "To encourage someone is to...", 0, "motivate = khuyến khích, tạo động lực"],
+          [33, "To combine things is to...", 3, "join = kết hợp, nối lại"],
+          [34, "To investigate something is to...", 4, "examine = điều tra, xem xét kỹ"],
+          [35, "To replace something is to...", 1, "substitute = thay thế"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "appealing|fragile|independent|sensible|temporary|guilty|hollow|jealous|massive|polite|scarce",
+        q: [
+          [36, "Easy to break.", 1, "fragile = dễ vỡ, dễ hỏng"],
+          [37, "Lasting for only a short time.", 4, "temporary = tạm thời"],
+          [38, "Showing good judgement.", 3, "sensible = hợp lý, sáng suốt"],
+          [39, "Very attractive or interesting.", 0, "appealing = hấp dẫn, lôi cuốn"],
+          [40, "Not depending on anyone else.", 2, "independent = độc lập, tự chủ"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "consent|crisis|impact|peak|terms|harbour|ingredient|signal|boundary|habit",
+        q: [
+          [41, "The company faced a serious _____ after the product failed.", 1, "a serious crisis = cuộc khủng hoảng nghiêm trọng"],
+          [42, "She checked the _____ before signing the contract.", 4, "the terms = các điều khoản hợp đồng"],
+          [43, "The _____ of the mountain was covered in snow.", 3, "the peak = đỉnh núi"],
+          [44, "His speech had a powerful _____ on the audience.", 2, "a powerful impact = tác động mạnh mẽ"],
+          [45, "We need written _____ from your parents.", 0, "written consent = sự đồng ý bằng văn bản"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "argument|deadline|concern|experience|solution|luggage|melody|edition|account|border",
+        q: [
+          [46, "growing + _____", 2, "growing concern = mối quan ngại ngày càng tăng"],
+          [47, "bitter + _____", 0, "bitter argument = cuộc tranh cãi gay gắt"],
+          [48, "valuable + _____", 3, "valuable experience = kinh nghiệm quý báu"],
+          [49, "temporary + _____", 4, "temporary solution = giải pháp tạm thời"],
+          [50, "strict + _____", 1, "strict deadline = hạn chót nghiêm ngặt"]
+        ]
+      }
+    ]
+  },
+
+  // 5. PRACTICE TEST 05
+  {
+    id: "practice_05",
+    title: "PRACTICE TEST 05 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["We had better ____ now.", "leave|to leave|leaving", 0, "Had better + V nguyên mẫu không to -> leave."],
+      ["I'm interested in the course ____ starts next week.", "who|which|where", 1, "Course là sự việc làm chủ ngữ mệnh đề quan hệ -> which."],
+      ["She speaks ____ clearly that everyone understands her.", "so|such|too", 0, "Cấu trúc so + adv + that: so clearly that."],
+      ["I have ____ seen such a beautiful view.", "ever|never|yet", 1, "Have never seen: chưa từng thấy."],
+      ["The meeting ____ cancelled yesterday.", "was|is|has", 0, "Bị động quá khứ đơn (yesterday) -> was cancelled."],
+      ["He avoided ____ about the problem.", "talk|talking|to talk", 1, "Avoid + V-ing -> talking."],
+      ["She is looking forward to ____ you soon.", "see|seeing|to see", 1, "Look forward to + V-ing -> seeing."],
+      ["My brother is not as tall ____ me.", "than|as|from", 1, "So sánh ngang bằng: not as tall as."],
+      ["She told me she ____ busy that day.", "is|has been|was", 2, "Câu tường thuật lùi thì is -> was."],
+      ["They need someone ____ can work at weekends.", "which|who|where", 1, "Who thay cho someone làm chủ ngữ."],
+      ["I'd like ____ cup of tea, please.", "a|an|(-)", 0, "Cup bắt đầu bằng phụ âm /k/ đếm được số ít -> a cup."],
+      ["We were surprised ____ the news.", "at|on|in", 0, "Be surprised at + noun."],
+      ["Have you finished ____ the report?", "write|writing|to write", 1, "Finish + V-ing -> writing."],
+      ["The students ____ by the teacher now.", "are being helped|helped|have helped", 0, "Hiện tại tiếp diễn bị động (now) -> are being helped."],
+      ["He has lived in this town ____ 2018.", "for|since|during", 1, "Since + mốc thời gian (2018)."],
+      ["She is ____ person in the class.", "smarter|the smartest|smart", 1, "So sánh nhất -> the smartest."],
+      ["I can't find the keys ____ I left on the table.", "who|where|that", 2, "That thay cho vật (“the keys”) trong mệnh đề quan hệ xác định."],
+      ["She asked him ____ he wanted coffee or tea.", "whether|what|which", 0, "Whether... or... dùng cho câu gián tiếp lựa chọn."],
+      ["You don't like spicy food, ____?", "do you|don't you|are you", 0, "Mệnh đề chính phủ định (don't) -> câu hỏi đuôi khẳng định: do you?"],
+      ["It's time we ____ home.", "go|went|going", 1, "It's time + V quá khứ đơn -> went."],
+      ["The film was ____ by millions of people.", "watched|watching|watch", 0, "Bị động: was + V3/ed -> watched."],
+      ["He worked hard ____ he could pass the test.", "so that|because of|despite", 0, "So that + mệnh đề chỉ mục đích."],
+      ["I regret ____ you that your application was unsuccessful.", "tell|telling|to tell", 2, "Regret to tell: lấy làm tiếc khi phải thông báo tin không vui."],
+      ["The house ____ roof is red belongs to my uncle.", "who|whose|which", 1, "Đại từ quan hệ chỉ sở hữu -> whose roof."],
+      ["If I had known your number, I ____ called you.", "would have|will have|had", 0, "Câu điều kiện loại 3 -> would have called."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "suggest|limit|bear|assign|change|invite|rescue|observe|polish|divide|doubt",
+        q: [
+          [26, "allocate", 3, "allocate = assign (phân bổ, giao)"],
+          [27, "convert", 4, "convert = change (chuyển đổi, thay đổi)"],
+          [28, "endure", 2, "endure = bear (chịu đựng)"],
+          [29, "imply", 0, "imply = suggest (ngụ ý, hàm ý)"],
+          [30, "restrict", 1, "restrict = limit (hạn chế)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "admit|oversee|overstate|hand out|receive|decorate|refuse|calculate|regret|compete",
+        q: [
+          [31, "To exaggerate something is to...", 2, "overstate = phóng đại, nói quá"],
+          [32, "To inherit something is to...", 4, "receive = thừa hưởng, nhận được"],
+          [33, "To supervise someone is to...", 1, "oversee = giám sát"],
+          [34, "To confess something is to...", 0, "admit = thú nhận"],
+          [35, "To distribute something is to...", 3, "hand out = phân phát"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "appealing|fragile|independent|sensible|temporary|guilty|hollow|jealous|massive|polite|scarce",
+        q: [
+          [36, "Easy to break.", 1, "fragile = dễ vỡ, dễ hỏng"],
+          [37, "Lasting for only a short time.", 4, "temporary = tạm thời"],
+          [38, "Showing good judgement.", 3, "sensible = hợp lý, sáng suốt"],
+          [39, "Very attractive or interesting.", 0, "appealing = hấp dẫn, lôi cuốn"],
+          [40, "Not depending on anyone else.", 2, "independent = độc lập, tự chủ"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "consent|crisis|impact|peak|terms|harbour|ingredient|signal|boundary|habit",
+        q: [
+          [41, "The company faced a serious _____ after the product failed.", 1, "a serious crisis = cuộc khủng hoảng nghiêm trọng"],
+          [42, "She checked the _____ before signing the contract.", 4, "the terms = các điều khoản hợp đồng"],
+          [43, "The _____ of the mountain was covered in snow.", 3, "the peak = đỉnh núi"],
+          [44, "His speech had a powerful _____ on the audience.", 2, "a powerful impact = tác động mạnh mẽ"],
+          [45, "We need written _____ from your parents.", 0, "written consent = sự đồng ý bằng văn bản"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "argument|deadline|concern|experience|solution|luggage|melody|edition|account|border",
+        q: [
+          [46, "growing + _____", 2, "growing concern = mối quan ngại ngày càng tăng"],
+          [47, "bitter + _____", 0, "bitter argument = cuộc tranh cãi gay gắt"],
+          [48, "valuable + _____", 3, "valuable experience = kinh nghiệm quý báu"],
+          [49, "temporary + _____", 4, "temporary solution = giải pháp tạm thời"],
+          [50, "strict + _____", 1, "strict deadline = hạn chót nghiêm ngặt"]
+        ]
+      }
+    ]
+  },
+
+  // 6. GRAMMAR & VOCABULARY TEST 1
+  {
+    id: "test_01",
+    title: "GRAMMAR & VOCABULARY TEST 1 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["The woman, _____ sold me those flowers, spent twenty minutes wrapping them.", "what|that|who", 2, "Mệnh đề quan hệ không xác định (có dấu phẩy) chỉ người làm chủ ngữ -> dùng who."],
+      ["A: I’ve just seen Mark. B: You _____ have seen him. He’s on holiday at the moment.", "can’t|shouldn’t|needn’t", 0, "Can’t have + V3: suy luận một việc chắc chắn không thể đã xảy ra trong quá khứ."],
+      ["He emphasised in his speech that _____ education he received when younger had been excellent.", "(–)|an|the", 2, "Nền giáo dục cụ thể được xác định bởi mệnh đề he received -> dùng mạo từ the."],
+      ["She takes the bus to work _____ day.", "early|many|every", 2, "Every day: mỗi ngày."],
+      ["I’ll call you when I _____ home.", "get|will get|getting", 0, "Mệnh đề thời gian với when chỉ tương lai dùng hiện tại đơn -> get."],
+      ["We ate dinner and _____ we watched a film.", "then|since|so", 0, "Hai hành động theo trình tự thời gian -> dùng then (sau đó)."],
+      ["We’re _____ in a beautiful holiday home at the moment.", "stay|staying|stayed", 1, "At the moment -> Hiện tại tiếp diễn: we're staying."],
+      ["When I got home, Jenny _____ on the telephone.", "was speaking|speaking|speak", 0, "Hành động đang diễn ra tại thời điểm quá khứ -> was speaking."],
+      ["Coffee _____ to be much cheaper a few years ago.", "would|has|used", 2, "Cấu trúc used to + V (trạng thái trong quá khứ) -> used."],
+      ["I’m not sure about my future. _____ I will start a business.", "Perhaps|Shall|Might", 0, "Perhaps (có lẽ) đứng đầu câu trước mệnh đề có will."],
+      ["They ate their lunch while they _____ coming home from school.", "were|was|are", 0, "Chủ ngữ they đi với were trong quá khứ tiếp diễn."],
+      ["She bought it herself, _____ she?", "hasn’t|didn’t|shouldn’t", 1, "Bought ở quá khứ đơn khẳng định -> câu hỏi đuôi: didn't she?"],
+      ["If the dress _____ been so expensive, she would have bought it.", "hadn’t|weren’t|aren’t", 0, "Câu điều kiện loại 3: If + had not + V3 -> hadn't."],
+      ["I _____ a great book this morning – I really want to finish it.", "was reading|read|have read", 0, "Hành động đang diễn ra vào buổi sáng và chưa hoàn tất -> was reading."],
+      ["Excuse me? Can I try _____ this jacket to make sure it fits?", "under|with|on", 2, "Try on: mặc thử quần áo."],
+      ["I saw Wi Joo this morning and she _____ if you were free tomorrow.", "told|asked|said", 1, "Ask if + mệnh đề: hỏi liệu..."],
+      ["When I go to university, I may _____ history.", "study|to study|studying", 0, "Sau modal verb may dùng V nguyên thể không to -> study."],
+      ["It _____ be meat-free – it tastes just like chicken!", "could|can|can’t", 2, "Suy luận phủ định chắc chắn cao ở hiện tại -> can't be."],
+      ["It was a dark, moonlit night when the traveller _____ at the inn.", "arrived|was arriving|had arrived", 0, "Sự kiện chính hoàn thành trong quá khứ -> arrived."],
+      ["If I hadn’t gone out last night, I _____ be so tired now.", "won’t|wouldn’t|hadn’t", 1, "Câu điều kiện hỗn hợp (điều kiện loại 3 + kết quả hiện tại loại 2) -> wouldn't."],
+      ["I _____ like mushrooms, but I can’t stop eating them now.", "wouldn’t|didn’t use to|couldn’t", 1, "Didn't use to + V: trước đây không thích nhưng nay đã thay đổi."],
+      ["The newspaper China Today _____ published for over 60 years.", "is being|has been|was being", 1, "For over 60 years + bị động -> has been published."],
+      ["They said they _____ been studying for ages.", "will have|are|had", 2, "Câu tường thuật lùi thì have been -> had been."],
+      ["My father, _____ is a dentist, told me not to drink sugary drinks.", "who|which|that", 0, "Mệnh đề quan hệ không xác định chỉ người làm chủ ngữ -> who."],
+      ["_____ memory of the day I met the president is very special to me.", "The|A|(–)", 0, "Danh từ xác định bởi cụm of the day I met the president -> dùng The."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 1–5 (26–30): Match each word with the closest meaning.",
+        o: "practise|train|look after|make|decide|take|shut|propose|believe|develop|worry",
+        q: [
+          [26, "create", 3, "create = make (tạo ra)"],
+          [27, "choose", 4, "choose ≈ decide (lựa chọn, quyết định)"],
+          [28, "close", 6, "close = shut (đóng)"],
+          [29, "improve", 9, "improve ≈ develop (cải thiện, phát triển)"],
+          [30, "care for", 2, "care for = look after (chăm sóc)"]
+        ]
+      },
+      {
+        t: "Questions 6–10 (31–35): Match each definition with the correct word.",
+        o: "concern|challenge|instruct|appear|worry|obtain|wish|compensate|assume|approve",
+        q: [
+          [31, "To oppose someone is to…", 1, "challenge = chống đối, thách thức"],
+          [32, "To teach someone is to…", 2, "instruct = dạy, hướng dẫn"],
+          [33, "To accept something is to…", 9, "approve = chấp nhận, chấp thuận"],
+          [34, "To get something is to…", 5, "obtain = nhận được, có được"],
+          [35, "To pay someone is to…", 7, "compensate = trả công, bồi thường"]
+        ]
+      },
+      {
+        t: "Questions 11–15 (36–40): Match each definition with the correct word.",
+        o: "Having a lot of strong emotion|artificial|brave|crucial|curious|fierce|lazy|obscure|peculiar|smooth|emotional",
+        q: [
+          [36, "Having a lot of strong emotion.", 10, "emotional = giàu cảm xúc, dễ xúc động"],
+          [37, "Wanting to know or learn something.", 4, "curious = tò mò, muốn tìm hiểu"],
+          [38, "Not natural or real.", 1, "artificial = nhân tạo, không tự nhiên"],
+          [39, "Not clear and difficult to understand or see.", 7, "obscure = mơ hồ, khó hiểu"],
+          [40, "Having a flat, even surface.", 9, "smooth = nhẵn, mịn, bằng phẳng"]
+        ]
+      },
+      {
+        t: "Questions 16–20 (41–45): Choose the correct word to complete each sentence.",
+        o: "atmosphere|canteen|ceiling|corridor|discipline|envelope|fringe|hedge|museum|wardrobe",
+        q: [
+          [41, "He had to walk down a long dark _____ to get to his room.", 3, "corridor = hành lang"],
+          [42, "The teacher should maintain _____ in the classroom to make the lesson effective.", 4, "maintain discipline = duy trì kỷ luật"],
+          [43, "She opened the _____ and took a coat out of it.", 9, "wardrobe = tủ quần áo"],
+          [44, "You should cut your _____ regularly; otherwise, your hair will get in your eyes.", 6, "fringe = tóc mái"],
+          [45, "The local _____ has an exhibit about the history of this area.", 8, "museum = bảo tàng"]
+        ]
+      },
+      {
+        t: "Questions 21–25 (46–50): Match each word with the correct option to form a common collocation.",
+        o: "club|efforts|painting|roads|tasks",
+        q: [
+          [46, "abstract + _____", 2, "abstract painting = tranh trừu tượng"],
+          [47, "athletics + _____", 0, "athletics club = câu lạc bộ điền kinh"],
+          [48, "congested + _____", 3, "congested roads = những con đường ùn tắc"],
+          [49, "frantic + _____", 1, "frantic efforts = những nỗ lực cuống cuồng, gấp gáp"],
+          [50, "housework + _____", 4, "housework tasks = các công việc nhà"]
+        ]
+      }
+    ]
+  },
+
+  // 7. GRAMMAR & VOCABULARY TEST 2
+  {
+    id: "test_02",
+    title: "GRAMMAR & VOCABULARY TEST 2 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["A: Do you think you will get the job? B: _____, but I’m not sure.", "Possible|Possibility|Possibly", 2, "Possibly là trạng từ dùng làm câu trả lời ngắn nghĩa là “có thể”."],
+      ["I _____ 25 years old.", "have|am|(–)", 1, "Nói về tuổi dùng động từ to be: I am 25 years old."],
+      ["I have _____ English for three years.", "studied|study|studying", 0, "Hiện tại hoàn thành: have + V3 (studied)."],
+      ["A: I enjoy working on challenging projects at work. B: So _____ I.", "am|do|can", 1, "Đồng tình với động từ thường ở hiện tại đơn (enjoy) -> So do I."],
+      ["We could cook dinner. _____, we could buy some takeaway food.", "Therefore|On the other hand|Although", 1, "On the other hand: mặt khác (đưa ra lựa chọn khác)."],
+      ["You really should _____ to Barcelona – it’s a wonderful city.", "go|to go|going", 0, "Should + V nguyên thể không to -> go."],
+      ["You need _____ new shoes – those ones are too old!", "to buy|buy|buying", 0, "Need to + V: cần làm gì -> to buy."],
+      ["When I was at school, I used _____ a good student.", "to be|be|being", 0, "Used to + V: từng là -> to be."],
+      ["I’ve got no plans for the weekend. Maybe _____ visit my parents.", "I|I’m|I’ll", 2, "Maybe I'll + V: có lẽ tôi sẽ..."],
+      ["I’m reading a really _____ book on the history of Europe.", "interest|interesting|interested", 1, "Tính từ đuôi -ing mô tả bản chất sự vật -> interesting book."],
+      ["He’s about 40, but in this photograph he looks much _____.", "young|younger|youngest", 1, "Much + tính từ so sánh hơn -> much younger."],
+      ["She has _____ two books.", "written|wrote|write", 0, "Hiện tại hoàn thành: has + V3 (written)."],
+      ["I don’t recommend driving in the morning because there’s too _____ traffic.", "much|many|most", 0, "Traffic là danh từ không đếm được -> too much."],
+      ["I never do my homework _____ I hate studying at home.", "so|because|although", 1, "Because chỉ nguyên nhân."],
+      ["They’re so different. I _____, there’s no way they’ll be happy together.", "mean|decide|wish", 0, "I mean: ý tôi là (dùng để làm rõ ý vừa nói)."],
+      ["Because of computers, many people don’t watch a lot of _____ now.", "the television|a television|television", 2, "Watch television (hoạt động xem truyền hình nói chung) không dùng mạo từ."],
+      ["I think, in the future, people _____ live much longer than they do now.", "ought|will|would", 1, "Dự đoán tương lai với I think -> will live."],
+      ["Call me tomorrow after 8.30, because I will just _____ at home.", "about to relax|have relax|be relaxing", 2, "Tương lai tiếp diễn: will be + V-ing -> be relaxing."],
+      ["The doctor says I will _____ much better by the end of the week.", "to feel|be feeling|have felt", 1, "Will be + V-ing diễn tả trạng thái dự kiến trong tương lai -> be feeling."],
+      ["_____ been reading this book now for a week and it isn’t getting any better!", "I’ve|I’m|I’d", 0, "Hiện tại hoàn thành tiếp diễn: I've been reading."],
+      ["The garden is looking untidy – you need to get rid _____ the weeds.", "from|out|of", 2, "Cụm cố định get rid of: loại bỏ."],
+      ["The next meeting _____ on the sixth of June.", "is holding|will be held|holds", 1, "Bị động tương lai đơn -> will be held."],
+      ["_____ of China is very interesting.", "history|History|The history", 2, "Xác định bởi of China -> dùng The history."],
+      ["You _____ have bought that car. What a waste of money!", "shouldn’t|mustn’t|couldn’t", 0, "Shouldn't have + V3: lẽ ra không nên làm gì trong quá khứ."],
+      ["This is a _____ train to London. It doesn’t stop on the way.", "direction|directly|direct", 2, "Cần tính từ đứng trước danh từ train -> a direct train."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 1–5 (26–30): Match each word with the closest meaning.",
+        o: "area|rule|money|base|chance|department|plan|approach|business|surprise|large",
+        q: [
+          [26, "design", 6, "design ≈ plan (thiết kế, kế hoạch)"],
+          [27, "policy", 1, "policy ≈ rule (chính sách, quy định)"],
+          [28, "fortune", 2, "fortune ≈ money (tài sản, số tiền lớn)"],
+          [29, "wonder", 9, "wonder ≈ surprise (sự ngạc nhiên, điều kỳ diệu)"],
+          [30, "opportunity", 4, "opportunity = chance (cơ hội)"]
+        ]
+      },
+      {
+        t: "Questions 6–10 (31–35): Finish each sentence using a word from the list.",
+        o: "figure|board|cottage|army|desk|crowd|carpet|character|case|example",
+        q: [
+          [31, "The group of people who protect a country is a/an...", 3, "army = quân đội"],
+          [32, "A covering for floors is called a/an...", 6, "carpet = thảm trải sàn"],
+          [33, "A type of house in the country is called a/an...", 2, "cottage = nhà nhỏ ở vùng quê"],
+          [34, "A large group of people together is called a/an...", 5, "crowd = đám đông"],
+          [35, "A type of table used for work is called a/an...", 4, "desk = bàn làm việc"]
+        ]
+      },
+      {
+        t: "Questions 11–15 (36–40): Finish each sentence using a word from the list.",
+        o: "sock|hood|light|script|witness|error|port|call|champion|country",
+        q: [
+          [36, "Just one more _____ is enough to end the project.", 5, "error = lỗi"],
+          [37, "The jacket has a/an _____ to protect your head.", 1, "hood = mũ trùm đầu"],
+          [38, "The ship sailed into the _____ on time.", 6, "port = cảng"],
+          [39, "The actors read their lines from the _____.", 3, "script = kịch bản"],
+          [40, "The cycling _____ broke the world record.", 8, "champion = nhà vô địch"]
+        ]
+      },
+      {
+        t: "Questions 16–20 (41–45): Finish each sentence using a word from the list.",
+        o: "fly|involve|approve|benefit|complicate|compete|focus|presume|borrow|catch",
+        q: [
+          [41, "The board will _____ the plan tomorrow.", 2, "approve = phê duyệt"],
+          [42, "Can I _____ some money from you?", 8, "borrow = vay, mượn"],
+          [43, "This fact is going to _____ everything.", 4, "complicate = làm phức tạp"],
+          [44, "Two teams are going to _____ in the race.", 5, "compete = thi đấu, cạnh tranh"],
+          [45, "She couldn’t _____ on the question.", 6, "focus on = tập trung vào"]
+        ]
+      },
+      {
+        t: "Questions 21–25 (46–50): Match each word with the word most often used with it.",
+        o: "property|hygiene|mechanism|effort|agreement|formula|personnel|profile|effect|origins",
+        q: [
+          [46, "adverse + _____", 8, "adverse effect = tác động bất lợi"],
+          [47, "vacant + _____", 0, "vacant property = bất động sản bỏ trống"],
+          [48, "collaborative + _____", 3, "collaborative effort = nỗ lực hợp tác"],
+          [49, "unanimous + _____", 4, "unanimous agreement = sự đồng thuận tuyệt đối"],
+          [50, "humble + _____", 9, "humble origins = xuất thân bình dị, khiêm tốn"]
+        ]
+      }
+    ]
+  },
+
+  // 8. GRAMMAR & VOCABULARY TEST 3
+  {
+    id: "test_03",
+    title: "GRAMMAR & VOCABULARY TEST 3 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["In those days, my father _____ never eat dinner after eight o’clock.", "would|will|used to", 0, "Thói quen trong quá khứ có trạng từ never đứng trước động từ nguyên mẫu -> dùng would."],
+      ["He _____ finished cooking when we arrived.", "have|had|has", 1, "Hoàn thành trước một mốc quá khứ -> quá khứ hoàn thành: had finished."],
+      ["If you were a better cook, you _____ need to eat out all the time.", "won’t|wouldn’t|hadn’t", 1, "Câu điều kiện loại 2: If + quá khứ đơn, wouldn't + V."],
+      ["The passenger _____ a fine because he didn’t have the right ticket.", "given|was given|didn’t give", 1, "Bị động quá khứ đơn: was given a fine (bị phạt)."],
+      ["There were _____ than fifty people in the audience last night.", "fewer|lesser|few", 0, "People là danh từ đếm được số nhiều + than -> fewer than."],
+      ["I’m _____ happy with my new car. It’s brilliant!", "so|quite|a bit", 0, "It's brilliant! thể hiện mức độ rất mạnh -> so happy."],
+      ["I’m not sure about my future. _____ I’ll start a business.", "Sometimes|Perhaps|Always", 1, "Không chắc chắn (not sure) -> dùng Perhaps (có lẽ)."],
+      ["Please, _____ the street if the light is red.", "cross not|not cross|do not cross", 2, "Câu mệnh lệnh phủ định: do not + V nguyên thể."],
+      ["Why _____ you apply for the job? You’ve got the experience.", "are|don’t|not", 1, "Cấu trúc gợi ý: Why don't you + V?"],
+      ["I _____ London, but it’s expensive.", "likes|like|liking", 1, "Chủ ngữ I ở hiện tại đơn dùng V nguyên thể -> like."],
+      ["We _____ through France during the summer.", "was travelling|travelling|travelled", 2, "Hành động đã xảy ra và hoàn tất trong quá khứ -> travelled."],
+      ["John: I love riding bikes. Paul: _____? Me too!", "Really|Right|Anyway", 0, "Really? thể hiện sự ngạc nhiên/hứng thú."],
+      ["I’m really not sure what to do at work. I need _____ advice.", "the|piece of|some", 2, "Advice không đếm được -> dùng some advice."],
+      ["I think, in the future, space travel _____ as common as plane travel is now.", "will become|has become|is becoming", 0, "Dự đoán tương lai (I think, in the future) -> will become."],
+      ["Please don’t come in the morning. I will _____ if you do.", "have worked|be working|work", 1, "Hành động sẽ đang diễn ra vào một thời điểm tương lai -> will be working."],
+      ["San Francisco is the most beautiful city I _____ visited.", "ever|have|had", 1, "So sánh nhất + hiện tại hoàn thành chỉ trải nghiệm -> I have visited."],
+      ["I’m sorry to let you _____, but I can’t come to your party.", "down|on|under", 0, "Let someone down: làm ai đó thất vọng."],
+      ["You missed a great party on Saturday night. You _____ have come.", "must|ought|should", 2, "Should have + V3: lẽ ra bạn nên đến."],
+      ["_____ the cold weather, she went swimming.", "Although|Despite|In spite", 1, "Despite + cụm danh từ (the cold weather)."],
+      ["He had been working for hours when he _____ asleep.", "has fallen|falls|fell", 2, "Hành động cắt ngang trong quá khứ -> fell asleep."],
+      ["Before she got married, she _____ go out most evenings.", "should|would|must", 1, "Would + V chỉ thói quen lặp lại trong quá khứ."],
+      ["It _____ been snowing heavily, so we decided to go skiing.", "has|had|would have", 1, "Xảy ra trước decided trong quá khứ -> had been snowing."],
+      ["It is expected that two million copies of the novel _____ sold by December.", "will have been|have been|will have being", 0, "By December + bị động -> tương lai hoàn thành bị động: will have been sold."],
+      ["If I _____ harder at school, I wouldn’t be doing this job now.", "has worked|have worked|had worked", 2, "Câu điều kiện hỗn hợp (mệnh đề If trái với quá khứ) -> had worked."],
+      ["The way I see it, you _____ have sold the land then – prices are higher now.", "mustn’t|shouldn’t|can’t", 1, "Shouldn't have + V3: lẽ ra trước đây không nên bán."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 1–5 (26–30): Match each word with the closest meaning.",
+        o: "doubt|tell|accept|join|realise|assume|choose|finish|disagree|touch|large",
+        q: [
+          [26, "oppose", 8, "oppose ≈ disagree (phản đối, không đồng ý)"],
+          [27, "unite", 3, "unite ≈ join (hợp nhất, kết hợp)"],
+          [28, "complete", 7, "complete = finish (hoàn thành)"],
+          [29, "say", 1, "say ≈ tell (nói, kể)"],
+          [30, "vote", 6, "vote ≈ choose (bỏ phiếu, lựa chọn)"]
+        ]
+      },
+      {
+        t: "Questions 6–10 (31–35): Finish each definition using a word from the list.",
+        o: "instruct|improve|follow|share|cover|refuse|measure|link|observe|estimate",
+        q: [
+          [31, "To say no is to...", 5, "refuse = từ chối"],
+          [32, "To look at something is to...", 8, "observe = nhìn, quan sát"],
+          [33, "To wrap something is to...", 4, "cover = bọc, bao phủ"],
+          [34, "To give orders is to...", 0, "instruct = ra lệnh, chỉ thị"],
+          [35, "To guess something is to...", 9, "estimate = đoán, ước tính"]
+        ]
+      },
+      {
+        t: "Questions 11–15 (36–40): Match each word with the closest meaning.",
+        o: "catch|dance|chase|hit|step|stand|excite|laugh|mix|fix",
+        q: [
+          [36, "whack", 3, "whack = hit (đánh mạnh)"],
+          [37, "tread", 4, "tread = step (bước, giẫm)"],
+          [38, "arrest", 0, "arrest ≈ catch (bắt, bắt giữ)"],
+          [39, "mend", 9, "mend = fix (sửa, sửa chữa)"],
+          [40, "thrill", 6, "thrill = excite (làm phấn khích)"]
+        ]
+      },
+      {
+        t: "Questions 16–20 (41–45): Match each word with the word most often used with it.",
+        o: "hunters|subject|employee|programme|shoppers|joint|proportions|wipers|size|businessmen",
+        q: [
+          [41, "millionaire + _____", 9, "millionaire businessmen = những doanh nhân triệu phú"],
+          [42, "epidemic + _____", 6, "epidemic proportions = quy mô rất lớn/nghiêm trọng"],
+          [43, "diploma + _____", 3, "diploma programme = chương trình cấp bằng"],
+          [44, "windscreen + _____", 7, "windscreen wipers = cần gạt nước kính chắn gió"],
+          [45, "bargain + _____", 0, "bargain hunters = những người săn hàng giá rẻ"]
+        ]
+      },
+      {
+        t: "Questions 21–25 (46–50): Choose the correct word to complete each sentence.",
+        o: "catch|vicious|swift|organic|ripe|extravagant|secret|furious|vocal|hideous",
+        q: [
+          [46, "I don’t buy _____ food because it’s expensive and I think it’s a waste of money.", 3, "organic food = thực phẩm hữu cơ"],
+          [47, "He was an excitable man and was very _____ about being unhappy.", 8, "vocal = mạnh mẽ/công khai bày tỏ"],
+          [48, "It was one of the ugliest things I’ve ever seen. It was absolutely _____.", 9, "hideous = cực kỳ xấu xí, ghê rợn"],
+          [49, "They’d spent a huge amount of money on the wedding. It was very _____.", 5, "extravagant = xa hoa, tốn kém"],
+          [50, "When the player found out he’d lost the point, he was absolutely _____.", 7, "furious = cực kỳ tức giận"]
+        ]
+      }
+    ]
+  },
+
+  // 9. ACTUAL TEST 01
+  {
+    id: "actual_01",
+    title: "ACTUAL TEST 01 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["She is the woman ____ car was stolen.", "whose|who|which", 0, "[Practice 03 - Q3] Đại từ quan hệ chỉ sở hữu -> whose."],
+      ["You _____ smoke in the hospital.", "mustn’t|don’t have to|needn’t", 0, "[Practice 01 - Q7] Mustn't diễn tả sự cấm đoán."],
+      ["We arrived late ____ the traffic.", "because|because of|although", 1, "[Practice 02 - Q22] Because of + cụm danh từ."],
+      ["We had better ____ now.", "leave|to leave|leaving", 0, "[Practice 05 - Q1] Had better + V nguyên mẫu -> leave."],
+      ["She doesn’t like coffee, _____?", "does she|doesn’t she|is she", 0, "[Practice 01 - Q20] Câu hỏi đuôi khẳng định -> does she?"],
+      ["Do you know ____ this word means?", "what|which|who", 0, "[Practice 02 - Q1] What làm tân ngữ cho means."],
+      ["It was ____ a nice day that we went swimming.", "so|such|too", 1, "[Practice 04 - Q9] Such + a/an + adj + noun + that."],
+      ["He denied ____ the window.", "broke|to break|breaking", 2, "[Practice 02 - Q9] Deny + V-ing -> breaking."],
+      ["She asked him ____ he wanted coffee or tea.", "whether|what|which", 0, "[Practice 05 - Q18] Whether... or..."],
+      ["He ____ be at home; his car isn't outside.", "can't|must|should", 0, "[Practice 04 - Q21] Suy đoán phủ định chắc chắn -> can't."],
+      ["Neither Tom nor his friends _____ coming to the party.", "is|are|be", 1, "[Practice 01 - Q11] Chia theo chủ ngữ gần nhất (his friends) -> are."],
+      ["I have my hair ____ every month.", "cut|cutting|to cut", 0, "[Practice 02 - Q20] Have something done (V3/ed) -> cut."],
+      ["Do you know how long ____?", "the film is|is the film|does the film", 0, "[Practice 03 - Q13] Câu hỏi gián tiếp giữ trật tự khẳng định."],
+      ["They stopped ____ lunch at 1 p.m.", "have|having|to have", 2, "[Practice 04 - Q18] Stop to do something: dừng lại để ăn trưa."],
+      ["It's time we ____ home.", "go|went|going", 1, "[Practice 05 - Q20] It's time + V quá khứ đơn -> went."],
+      ["I was made ____ the room after the party.", "clean|to clean|cleaning", 1, "[Practice 03 - Q19] Be made to do something -> to clean."],
+      ["It’s the first time I _____ sushi.", "try|tried|have tried", 2, "[Practice 01 - Q15] It's the first time + hiện tại hoàn thành."],
+      ["This is the most interesting book I ____.", "ever read|have ever read|am ever reading", 1, "[Practice 04 - Q2] So sánh nhất + hiện tại hoàn thành -> have ever read."],
+      ["The students ____ by the teacher now.", "are being helped|helped|have helped", 0, "[Practice 05 - Q14] Hiện tại tiếp diễn bị động -> are being helped."],
+      ["If I were you, I ____ apologize.", "will|would|can", 1, "[Practice 02 - Q7] Câu điều kiện loại 2 -> would."],
+      ["The road was closed ____ an accident.", "because|due to|although", 1, "[Practice 03 - Q24] Due to + cụm danh từ."],
+      ["By next Friday, we _____ the project.", "will finish|will have finished|finish", 1, "[Practice 01 - Q5] Tương lai hoàn thành -> will have finished."],
+      ["The room ____ cleaned before the guests arrived.", "had been|has been|is being", 0, "[Practice 04 - Q12] Quá khứ hoàn thành bị động -> had been."],
+      ["I regret ____ you that your application was unsuccessful.", "tell|telling|to tell", 2, "[Practice 05 - Q23] Regret to tell: tiếc phải thông báo."],
+      ["If she had studied harder, she ____ passed the exam.", "would have|will have|had", 0, "[Practice 03 - Q23] Câu điều kiện loại 3 -> would have."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "evaluate|predict|set up|conceal|limit|rescue|explain|cancel|endure|measure|divide",
+        q: [
+          [26, "establish", 2, "establish = set up (thành lập, thiết lập)"],
+          [27, "clarify", 6, "clarify = explain (làm rõ, giải thích rõ)"],
+          [28, "tolerate", 8, "tolerate = endure (chịu đựng)"],
+          [29, "assess", 0, "assess = evaluate (đánh giá)"],
+          [30, "restrict", 4, "restrict = limit (hạn chế)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "examine|refuse|oversee|convince|worry|discuss terms|remain|instruct|calculate|ignore",
+        q: [
+          [31, "To persuade someone is to...", 3, "convince = thuyết phục"],
+          [32, "To teach someone is to...", 7, "instruct = hướng dẫn, chỉ dạy"],
+          [33, "To negotiate is to...", 5, "discuss terms = thương lượng"],
+          [34, "To investigate something is to...", 0, "examine = điều tra, xem xét kỹ"],
+          [35, "To supervise someone is to...", 2, "oversee = giám sát"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "casual|independent|vital|jealous|explicit|enormous|hazardous|temporary|sensible|generous|scarce",
+        q: [
+          [36, "Extremely important.", 2, "vital = cực kỳ quan trọng"],
+          [37, "Full of danger.", 6, "hazardous = nguy hiểm, đầy rủi ro"],
+          [38, "Clear and easy to understand.", 4, "explicit = rõ ràng, cụ thể"],
+          [39, "Showing good judgement.", 8, "sensible = hợp lý, sáng suốt"],
+          [40, "Not depending on anyone else.", 1, "independent = độc lập, tự chủ"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "summary|harbour|fault|complaint|terms|signal|investment|receipt|impact|recipe",
+        q: [
+          [41, "The company made a huge _____ in new equipment.", 6, "investment = khoản đầu tư"],
+          [42, "The machine broke down because of a small _____ in the engine.", 2, "fault = lỗi/hỏng hóc"],
+          [43, "The article gives a brief _____ of the experiment.", 0, "summary = bản tóm tắt"],
+          [44, "She checked the _____ before signing the contract.", 4, "terms = các điều khoản"],
+          [45, "His speech had a powerful _____ on the audience.", 8, "impact = tác động mạnh mẽ"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "information|damage|experience|route|concern|mistake|regulations|luggage|support|border",
+        q: [
+          [46, "strict + _____", 6, "strict regulations = các quy định nghiêm ngặt"],
+          [47, "confidential + _____", 0, "confidential information = thông tin mật"],
+          [48, "financial + _____", 8, "financial support = hỗ trợ tài chính"],
+          [49, "growing + _____", 4, "growing concern = mối quan ngại ngày càng tăng"],
+          [50, "valuable + _____", 2, "valuable experience = kinh nghiệm quý báu"]
+        ]
+      }
+    ]
+  },
+
+  // 10. ACTUAL TEST 02
+  {
+    id: "actual_02",
+    title: "ACTUAL TEST 02 (25 Grammar + 25 Vocab)",
+    grammar: [
+      ["I forgot _____ the door before I left home.", "locking|to lock|lock", 1, "[Practice 01 - Q2] Forget to lock: quên khóa cửa."],
+      ["She has been working here ____ three years.", "since|for|during", 1, "[Practice 02 - Q3] For + khoảng thời gian."],
+      ["I have never ____ to Thailand.", "be|been|being", 1, "[Practice 03 - Q2] Have never been to."],
+      ["I enjoy ____ in the morning.", "jog|jogging|to jog", 1, "[Practice 04 - Q1] Enjoy + V-ing -> jogging."],
+      ["She speaks ____ clearly that everyone understands her.", "so|such|too", 0, "[Practice 05 - Q3] So + adv + that."],
+      ["They are looking forward to ____ you.", "meet|meeting|met", 1, "[Practice 02 - Q5] Look forward to + V-ing -> meeting."],
+      ["The phone rang while I _____ dinner.", "cooked|was cooking|cook", 1, "[Practice 01 - Q8] Quá khứ tiếp diễn -> was cooking."],
+      ["You ____ bring your passport; it is necessary.", "must|might|needn't", 0, "[Practice 04 - Q6] Must: bắt buộc, cần thiết."],
+      ["He suggested ____ a taxi.", "take|taking|to take", 1, "[Practice 03 - Q6] Suggest + V-ing -> taking."],
+      ["He avoided ____ about the problem.", "talk|talking|to talk", 1, "[Practice 05 - Q6] Avoid + V-ing -> talking."],
+      ["I’m used to _____ early every day.", "get up|getting up|got up", 1, "[Practice 01 - Q14] Be used to + V-ing -> getting up."],
+      ["A: Where is Lisa? B: She ____ be in her room; the light is on.", "must|can't|needn't", 0, "[Practice 02 - Q11] Suy đoán chắc chắn ở hiện tại -> must."],
+      ["My brother is not as tall ____ me.", "than|as|from", 1, "[Practice 05 - Q8] Not as tall as."],
+      ["She works ____ than her brother.", "careful|more carefully|most carefully", 1, "[Practice 03 - Q12] Trạng từ so sánh hơn -> more carefully."],
+      ["If I ____ enough money, I would travel more.", "have|had|will have", 1, "[Practice 04 - Q11] Câu điều kiện loại 2 -> had."],
+      ["She can't come because she ____ her leg.", "has broken|broke|was breaking", 0, "[Practice 02 - Q16] Hiện tại hoàn thành -> has broken."],
+      ["If it rains tomorrow, we _____ at home.", "stay|stayed|will stay", 2, "[Practice 01 - Q17] Câu điều kiện loại 1 -> will stay."],
+      ["There are two books here. Which one is ____?", "your|yours|you", 1, "[Practice 04 - Q16] Đại từ sở hữu -> yours."],
+      ["There's someone at the door, ____?", "isn't there|is there|wasn't there", 0, "[Practice 03 - Q20] Câu hỏi đuôi -> isn't there?"],
+      ["She is ____ person in the class.", "smarter|the smartest|smart", 1, "[Practice 05 - Q16] So sánh nhất -> the smartest."],
+      ["He has ____ visited London twice.", "yet|already|still", 1, "[Practice 03 - Q25] Already trong câu khẳng định."],
+      ["The teacher told us ____ carefully.", "listening|listen|to listen", 2, "[Practice 02 - Q24] Tell us to listen."],
+      ["If I had known your number, I ____ called you.", "would have|will have|had", 0, "[Practice 05 - Q25] Câu điều kiện loại 3 -> would have."],
+      ["The book, _____ I borrowed from Mai, is excellent.", "who|which|where", 1, "[Practice 01 - Q25] Mệnh đề quan hệ không xác định chỉ vật -> which."],
+      ["By the time the police arrived, the thief ____.", "left|had left|was leaving", 1, "[Practice 04 - Q25] Quá khứ hoàn thành -> had left."]
+    ],
+    vocabGroups: [
+      {
+        t: "Questions 26–30: Match each word with the word that has the closest meaning.",
+        o: "buy|allow|begin|appear|suggest|decline|conceal|repair|measure|avoid|separate",
+        q: [
+          [26, "purchase", 0, "purchase = buy (mua)"],
+          [27, "permit", 1, "permit = allow (cho phép)"],
+          [28, "commence", 2, "commence = begin (bắt đầu)"],
+          [29, "emerge", 3, "emerge = appear (xuất hiện)"],
+          [30, "imply", 4, "imply = suggest (ngụ ý, hàm ý)"]
+        ]
+      },
+      {
+        t: "Questions 31–35: Match each definition with the correct word.",
+        o: "examine|compensate|stress|motivate|admit|refuse|remain|ignore|calculate|challenge",
+        q: [
+          [31, "To inspect something is to...", 0, "examine = kiểm tra kỹ"],
+          [32, "To pay someone is to...", 1, "compensate = bồi thường, đền bù"],
+          [33, "To emphasize something is to...", 2, "stress = nhấn mạnh"],
+          [34, "To encourage someone is to...", 3, "motivate = khuyến khích, tạo động lực"],
+          [35, "To confess something is to...", 4, "admit = thú nhận"]
+        ]
+      },
+      {
+        t: "Questions 36–40: Match each definition with the correct word.",
+        o: "flexible|exhausted|reliable|appealing|temporary|cautious|generous|hollow|jealous|massive|precise",
+        q: [
+          [36, "Able to change to suit different conditions.", 0, "flexible = linh hoạt"],
+          [37, "Extremely tired.", 1, "exhausted = kiệt sức, cực kỳ mệt"],
+          [38, "Able to be trusted.", 2, "reliable = đáng tin cậy"],
+          [39, "Very attractive or interesting.", 3, "appealing = hấp dẫn, lôi cuốn"],
+          [40, "Lasting for only a short time.", 4, "temporary = tạm thời"]
+        ]
+      },
+      {
+        t: "Questions 41–45: Choose the correct word to complete each sentence.",
+        o: "account|bypass|campaign|crisis|peak|evidence|receipt|target|ingredient|signal",
+        q: [
+          [41, "The lawyer asked the witness to give a clear _____ of events.", 0, "account = bản tường thuật"],
+          [42, "The city built a new _____ to reduce traffic jams.", 1, "bypass = đường tránh"],
+          [43, "The government launched a new _____ to reduce pollution.", 2, "campaign = chiến dịch"],
+          [44, "The company faced a serious _____ after the product failed.", 3, "crisis = cuộc khủng hoảng"],
+          [45, "The _____ of the mountain was covered in snow.", 4, "peak = đỉnh núi"]
+        ]
+      },
+      {
+        t: "Questions 46–50: Match each adjective with the correct noun.",
+        o: "growth|report|relationship|solution|deadline|evidence|route|support|damage|habit",
+        q: [
+          [46, "rapid + _____", 0, "rapid growth = sự tăng trưởng nhanh"],
+          [47, "annual + _____", 1, "annual report = báo cáo thường niên"],
+          [48, "close + _____", 2, "close relationship = mối quan hệ thân thiết"],
+          [49, "temporary + _____", 3, "temporary solution = giải pháp tạm thời"],
+          [50, "strict + _____", 4, "strict deadline = hạn chót nghiêm ngặt"]
+        ]
+      }
+    ]
+  }
+];
+
+/* ==========================================================================
+   2. DATA NORMALIZER & AUDIO ENGINE
+   ========================================================================== */
+const KEYS = "ABCDEFGHIJK".split("");
+
+function normalizeDB(rawList) {
+  return rawList.map(test => {
+    const questions = [];
+
+    // 1..25 Grammar
+    test.grammar.forEach((g, idx) => {
+      const qNum = idx + 1;
+      const opts = g[1].split("|").map((txt, i) => ({
+        key: KEYS[i],
+        text: txt,
+        fullLabel: `${KEYS[i]}. ${txt}`
+      }));
+      questions.push({
+        uid: `${test.id}_q${qNum}`,
+        testId: test.id,
+        testTitle: test.title,
+        qNum,
+        section: "grammar",
+        instruction: "Choose the best answer (A, B or C) to complete the sentence.",
+        prompt: g[0],
+        options: opts,
+        answerIndex: g[2],
+        explanation: g[3]
+      });
+    });
+
+    // 26..50 Vocabulary
+    test.vocabGroups.forEach(grp => {
+      const opts = grp.o.split("|").map((txt, i) => ({
+        key: KEYS[i],
+        text: txt,
+        fullLabel: `${KEYS[i]}. ${txt}`
+      }));
+      grp.q.forEach(item => {
+        const [qNum, prompt, ansIdx, exp] = item;
+        questions.push({
+          uid: `${test.id}_q${qNum}`,
+          testId: test.id,
+          testTitle: test.title,
+          qNum,
+          section: "vocab",
+          instruction: grp.t,
+          prompt,
+          options: opts,
+          answerIndex: ansIdx,
+          explanation: exp
+        });
+      });
+    });
+
+    return { id: test.id, title: test.title, questions };
+  });
+}
+
+const soundEngine = {
+  ctx: null,
+  init() {
+    if (!this.ctx) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) this.ctx = new AudioCtx();
+    }
+  },
+  play(type, enabled) {
+    if (!enabled) return;
+    try {
+      this.init();
+      if (!this.ctx) return;
+      if (this.ctx.state === "suspended") this.ctx.resume();
+
+      const now = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      if (type === "correct") {
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(523.25, now);
+        osc.frequency.setValueAtTime(659.25, now + 0.08);
+        osc.frequency.setValueAtTime(783.99, now + 0.16);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+        osc.start(now);
+        osc.stop(now + 0.35);
+      } else if (type === "wrong") {
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(220, now);
+        osc.frequency.setValueAtTime(165, now + 0.12);
+        gain.gain.setValueAtTime(0.18, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
+        osc.start(now);
+        osc.stop(now + 0.32);
+      }
+    } catch (e) {}
+  },
+  speak(text) {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const clean = text.replace(/_{2,}/g, " blank ").replace(/\+/g, " ");
+    const utter = new SpeechSynthesisUtterance(clean);
+    utter.lang = "en-GB";
+    utter.rate = 0.95;
+    window.speechSynthesis.speak(utter);
+  }
+};
+
+/* ==========================================================================
+   3. APPLICATION CONTROLLER
+   ========================================================================== */
+const app = {
+  tests: normalizeDB(DB),
+  currentTestId: "practice_01",
+  mode: "practice", // practice | exam | flashcard | review
+  section: "all",   // all | grammar | vocab
+  currentIndex: 0,
+  fcFlipped: false,
+  soundEnabled: true,
+  autoSpeak: false,
+  examSubmitted: false,
+  examTimeLeft: 25 * 60,
+  examTimer: null,
+
+  // Persistent state
+  answers: {},  // { uid: selectedIndex }
+  mistakes: {}, // { uid: { level: 'hard'|'good', timestamp } }
+
+  init() {
+    this.loadStorage();
+    this.populateSelect();
+    this.updateMistakeBadge();
+    this.render();
+
+    window.addEventListener("keydown", e => {
+      if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
+      if (e.key === "ArrowRight") this.nextQuestion();
+      if (e.key === "ArrowLeft") this.prevQuestion();
+      if (e.key === " " && this.mode === "flashcard") {
+        e.preventDefault();
+        this.flipFlashcard();
+      }
+    });
+  },
+
+  loadStorage() {
+    try {
+      const savedAns = localStorage.getItem("aptis_answers_v1");
+      const savedMis = localStorage.getItem("aptis_mistakes_v1");
+      const savedTheme = localStorage.getItem("aptis_theme_v1");
+      if (savedAns) this.answers = JSON.parse(savedAns);
+      if (savedMis) this.mistakes = JSON.parse(savedMis);
+      if (savedTheme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  },
+
+  saveStorage() {
+    try {
+      localStorage.setItem("aptis_answers_v1", JSON.stringify(this.answers));
+      localStorage.setItem("aptis_mistakes_v1", JSON.stringify(this.mistakes));
+    } catch (e) {}
+  },
+
+  populateSelect() {
+    const sel = document.getElementById("testSelect");
+    sel.innerHTML = this.tests.map(t => `<option value="${t.id}">${t.title}</option>`).join("");
+    sel.value = this.currentTestId;
+  },
+
+  getActiveQuestions() {
+    if (this.mode === "review") {
+      const allQ = [];
+      this.tests.forEach(t => allQ.push(...t.questions));
+      return allQ.filter(q => this.mistakes[q.uid]);
+    }
+    const test = this.tests.find(t => t.id === this.currentTestId) || this.tests[0];
+    return test.questions.filter(q => {
+      if (this.section === "grammar") return q.section === "grammar";
+      if (this.section === "vocab") return q.section === "vocab";
+      return true;
+    });
+  },
+
+  selectTest(testId) {
+    this.currentTestId = testId;
+    this.currentIndex = 0;
+    this.fcFlipped = false;
+    if (this.mode === "exam") this.startExamTimer();
+    this.render();
+  },
+
+  setMode(newMode) {
+    this.mode = newMode;
+    this.currentIndex = 0;
+    this.fcFlipped = false;
+    document.querySelectorAll(".mode-tab").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.mode === newMode);
+    });
+
+    if (newMode === "exam") {
+      this.examSubmitted = false;
+      this.startExamTimer();
+    } else {
+      this.stopExamTimer();
+    }
+    this.render();
+  },
+
+  setSection(sec) {
+    this.section = sec;
+    this.currentIndex = 0;
+    this.fcFlipped = false;
+    document.querySelectorAll(".pill").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.sec === sec);
+    });
+    this.render();
+  },
+
+  startExamTimer() {
+    this.stopExamTimer();
+    this.examTimeLeft = 25 * 60;
+    this.examTimer = setInterval(() => {
+      if (this.examTimeLeft > 0) {
+        this.examTimeLeft--;
+        const el = document.getElementById("examTimerDisplay");
+        if (el) el.textContent = this.formatTime(this.examTimeLeft);
+      } else {
+        this.submitExam();
+      }
+    }, 1000);
+  },
+
+  stopExamTimer() {
+    if (this.examTimer) {
+      clearInterval(this.examTimer);
+      this.examTimer = null;
+    }
+  },
+
+  formatTime(sec) {
+    const m = String(Math.floor(sec / 60)).padStart(2, "0");
+    const s = String(sec % 60).padStart(2, "0");
+    return `${m}:${s}`;
+  },
+
+  chooseOption(uid, idx, answerIndex) {
+    if (this.mode === "practice" && this.answers[uid] !== undefined) return;
+    if (this.mode === "exam" && this.examSubmitted) return;
+
+    this.answers[uid] = idx;
+
+    if (this.mode !== "exam") {
+      const isCorrect = idx === answerIndex;
+      soundEngine.play(isCorrect ? "correct" : "wrong", this.soundEnabled);
+      if (!isCorrect) {
+        this.mistakes[uid] = { level: "hard", ts: Date.now() };
+      }
+    }
+
+    this.saveStorage();
+    this.updateMistakeBadge();
+    this.render();
+  },
+
+  markSRS(uid, level) {
+    if (level === "easy") {
+      delete this.mistakes[uid];
+    } else {
+      this.mistakes[uid] = { level, ts: Date.now() };
+    }
+    this.saveStorage();
+    this.updateMistakeBadge();
+    if (this.mode === "review" || this.mode === "flashcard") {
+      this.nextQuestion();
+    } else {
+      this.render();
+    }
+  },
+
+  updateMistakeBadge() {
+    const count = Object.keys(this.mistakes).length;
+    const el = document.getElementById("mistakeCount");
+    if (el) el.textContent = count;
+  },
+
+  resetCurrentProgress() {
+    const list = this.getActiveQuestions();
+    list.forEach(q => delete this.answers[q.uid]);
+    this.currentIndex = 0;
+    this.examSubmitted = false;
+    if (this.mode === "exam") this.startExamTimer();
+    this.saveStorage();
+    this.render();
+  },
+
+  resetToFirst() {
+    this.currentIndex = 0;
+    this.render();
+  },
+
+  submitExam() {
+    this.stopExamTimer();
+    this.examSubmitted = true;
+    const list = this.getActiveQuestions();
+    list.forEach(q => {
+      const userAns = this.answers[q.uid];
+      if (userAns !== undefined && userAns !== q.answerIndex) {
+        this.mistakes[q.uid] = { level: "hard", ts: Date.now() };
+      }
+    });
+    this.saveStorage();
+    this.updateMistakeBadge();
+    soundEngine.play("correct", this.soundEnabled);
+    this.render();
+  },
+
+  prevQuestion() {
+    const list = this.getActiveQuestions();
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.fcFlipped = false;
+      this.render();
+      this.maybeAutoSpeak();
+    } else if (list.length > 0) {
+      this.currentIndex = 0;
+    }
+  },
+
+  nextQuestion() {
+    const list = this.getActiveQuestions();
+    if (this.currentIndex < list.length - 1) {
+      this.currentIndex++;
+      this.fcFlipped = false;
+      this.render();
+      this.maybeAutoSpeak();
+    }
+  },
+
+  jumpTo(idx) {
+    this.currentIndex = idx;
+    this.fcFlipped = false;
+    this.render();
+    this.maybeAutoSpeak();
+  },
+
+  flipFlashcard() {
+    this.fcFlipped = !this.fcFlipped;
+    this.render();
+  },
+
+  maybeAutoSpeak() {
+    if (!this.autoSpeak) return;
+    const list = this.getActiveQuestions();
+    const q = list[this.currentIndex];
+    if (q) soundEngine.speak(q.prompt);
+  },
+
+  toggleAutoSpeak() {
+    this.autoSpeak = !this.autoSpeak;
+    const btn = document.getElementById("btnAutoSpeak");
+    const lbl = document.getElementById("lblAutoSpeak");
+    btn.classList.toggle("active", this.autoSpeak);
+    lbl.textContent = `Auto-Read: ${this.autoSpeak ? "Bật" : "Tắt"}`;
+    if (this.autoSpeak) this.maybeAutoSpeak();
+  },
+
+  toggleSound() {
+    this.soundEnabled = !this.soundEnabled;
+    const btn = document.getElementById("btnSound");
+    const lbl = document.getElementById("lblSound");
+    btn.classList.toggle("active", this.soundEnabled);
+    lbl.textContent = `SFX: ${this.soundEnabled ? "Bật" : "Tắt"}`;
+  },
+
+  toggleTheme() {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    if (isDark) {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.setItem("aptis_theme_v1", "light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("aptis_theme_v1", "dark");
+    }
+  },
+
+  render() {
+    const vp = document.getElementById("appViewport");
+    const list = this.getActiveQuestions();
+
+    if (list.length === 0) {
+      vp.innerHTML = `
+        <div class="card" style="text-align:center; padding: 40px 20px;">
+          <h3 style="margin-bottom:8px;">🎉 Kho câu hỏi cần ôn đang trống!</h3>
+          <p style="color:var(--text-muted); margin-bottom:16px;">
+            Bạn chưa có câu trả lời sai nào hoặc đã thuộc hết các câu trong danh sách Spaced Repetition.
+          </p>
+          <button class="btn btn-primary" onclick="app.setMode('practice')">Quay lại Luyện tập</button>
+        </div>
+      `;
+      return;
+    }
+
+    if (this.currentIndex >= list.length) this.currentIndex = list.length - 1;
+    const q = list[this.currentIndex];
+
+    // Calculate stats
+    let answeredCount = 0;
+    let correctCount = 0;
+    list.forEach(item => {
+      if (this.answers[item.uid] !== undefined) {
+        answeredCount++;
+        if (this.answers[item.uid] === item.answerIndex) correctCount++;
+      }
+    });
+    const progressPct = Math.round(((this.currentIndex + 1) / list.length) * 100);
+
+    // FLASHCARD MODE
+    if (this.mode === "flashcard") {
+      const ansObj = q.options[q.answerIndex];
+      vp.innerHTML = `
+        <div class="status-strip">
+          <span>Thẻ ${this.currentIndex + 1} / ${list.length}</span>
+          <div class="progress-track"><div class="progress-fill" style="width:${progressPct}%"></div></div>
+          <span>${q.testTitle.split("(")[0]}</span>
+        </div>
+
+        <div class="flashcard" onclick="app.flipFlashcard()">
+          <div class="q-tags" style="margin-bottom:12px;">
+            <span class="badge ${q.section === 'grammar' ? 'badge-grammar' : 'badge-vocab'}">
+              ${q.section === 'grammar' ? 'Grammar' : 'Vocabulary'} • Q.${q.qNum}
+            </span>
+          </div>
+          <div class="q-prompt" style="font-size:1.3rem;">${q.prompt}</div>
+
+          ${this.fcFlipped ? `
+            <div class="fc-answer">✅ ${ansObj.fullLabel}</div>
+            <div class="exp-text" style="max-width:600px;">${q.explanation}</div>
+          ` : `
+            <div class="fc-hint">👆 Chạm vào thẻ hoặc nhấn phím Space để lật xem đáp án</div>
+          `}
+        </div>
+
+        <div class="srs-actions" style="margin-bottom:16px;">
+          <button class="srs-btn hard" onclick="app.markSRS('${q.uid}', 'hard')">🔴 Quên / Khó (Ôn lại)</button>
+          <button class="srs-btn good" onclick="app.markSRS('${q.uid}', 'good')">🟡 Nhớ mang máng</button>
+          <button class="srs-btn easy" onclick="app.markSRS('${q.uid}', 'easy')">🟢 Đã thuộc lòng</button>
+        </div>
+
+        <div class="nav-bar">
+          <button class="btn btn-secondary" onclick="app.prevQuestion()" ${this.currentIndex === 0 ? "disabled" : ""}>⬅ Câu trước</button>
+          <button class="btn btn-secondary" onclick="soundEngine.speak(${JSON.stringify(q.prompt)})">🔊 Nghe phát âm</button>
+          <button class="btn btn-primary" onclick="app.nextQuestion()" ${this.currentIndex === list.length - 1 ? "disabled" : ""}>Câu tiếp ➡</button>
+        </div>
+      `;
+      return;
+    }
+
+    // PRACTICE / EXAM / REVIEW MODE
+    const userChoice = this.answers[q.uid];
+    const showResult = (this.mode !== "exam" && userChoice !== undefined) || (this.mode === "exam" && this.examSubmitted);
+    const isCompactGrid = q.options.length > 4;
+
+    let summaryHTML = "";
+    if (this.mode === "exam" && this.examSubmitted) {
+      const pct = Math.round((correctCount / list.length) * 100);
+      summaryHTML = `
+        <div class="summary-banner">
+          <div>
+            <div style="font-size:0.85rem; opacity:0.9;">KẾT QUẢ BÀI THI THỬ</div>
+            <div class="summary-score">${correctCount} / ${list.length} (${pct}%)</div>
+          </div>
+          <button class="btn btn-secondary" style="color:#0f172a; background:#fff;" onclick="app.resetCurrentProgress()">Làm lại đề thi</button>
+        </div>
+      `;
+    }
+
+    const optionsHTML = q.options.map((opt, idx) => {
+      let cls = "opt-btn";
+      if (showResult) {
+        if (idx === q.answerIndex) cls += " correct";
+        else if (idx === userChoice) cls += " wrong";
+      } else if (idx === userChoice) {
+        cls += " selected";
+      }
+
+      return `
+        <button class="${cls}" onclick="app.chooseOption('${q.uid}', ${idx}, ${q.answerIndex})">
+          <span class="opt-key">${opt.key}</span>
+          <span>${opt.text}</span>
+        </button>
+      `;
+    }).join("");
+
+    const expHTML = showResult ? `
+      <div class="exp-box">
+        <div class="exp-header ${userChoice === q.answerIndex ? 'correct' : 'wrong'}">
+          <span>
+            ${userChoice === q.answerIndex
+              ? "🎉 Chính xác!"
+              : `❌ Chưa đúng! Đáp án đúng là: ${q.options[q.answerIndex].fullLabel}`}
+          </span>
+          <button class="icon-btn" onclick="soundEngine.speak(${JSON.stringify(q.options[q.answerIndex].text)})">🔊 Đọc đáp án</button>
+        </div>
+        <div class="exp-text">💡 <strong>Giải thích:</strong> ${q.explanation}</div>
+        <div class="srs-actions">
+          <button class="srs-btn hard" onclick="app.markSRS('${q.uid}', 'hard')">📌 Lưu vào mục Cần ôn</button>
+          <button class="srs-btn easy" onclick="app.markSRS('${q.uid}', 'easy')">✅ Đã nắm vững (Xóa khỏi mục Cần ôn)</button>
+        </div>
+      </div>
+    ` : "";
+
+    const paletteHTML = list.map((item, idx) => {
+      let pCls = "p-dot";
+      if (idx === this.currentIndex) pCls += " current";
+      const uAns = this.answers[item.uid];
+      if (uAns !== undefined) {
+        if (this.mode === "exam" && !this.examSubmitted) {
+          pCls += " answered";
+        } else {
+          pCls += (uAns === item.answerIndex) ? " correct" : " wrong";
+        }
+      }
+      return `<button class="${pCls}" onclick="app.jumpTo(${idx})">${item.qNum}</button>`;
+    }).join("");
+
+    vp.innerHTML = `
+      ${summaryHTML}
+
+      <div class="status-strip">
+        <span>Câu ${this.currentIndex + 1} / ${list.length}</span>
+        <div class="progress-track"><div class="progress-fill" style="width:${progressPct}%"></div></div>
+        ${this.mode === "exam" ? `
+          <span class="timer-badge">⏳ <span id="examTimerDisplay">${this.formatTime(this.examTimeLeft)}</span></span>
+        ` : `
+          <span>Đúng: ${correctCount}/${answeredCount}</span>
+        `}
+      </div>
+
+      <div class="card">
+        <div class="q-meta">
+          <div class="q-tags">
+            <span class="badge ${q.section === 'grammar' ? 'badge-grammar' : 'badge-vocab'}">
+              ${q.section === 'grammar' ? 'A. Grammar' : 'B. Vocabulary'}
+            </span>
+            <span style="font-weight:700; font-size:0.85rem; color:var(--text-muted);">
+              Question ${q.qNum} • ${q.testTitle.split("(")[0]}
+            </span>
+          </div>
+          ${this.mistakes[q.uid] ? `<span class="badge" style="background:var(--danger-light); color:var(--danger);">🔥 Cần ôn</span>` : ""}
+        </div>
+
+        <div class="q-instruction">${q.instruction}</div>
+
+        <div class="q-prompt-row">
+          <div class="q-prompt">${q.prompt}</div>
+          <button class="speak-btn" onclick="soundEngine.speak(${JSON.stringify(q.prompt)})" title="Nghe phát âm tiếng Anh">🔊</button>
+        </div>
+
+        <div class="options-grid ${isCompactGrid ? 'compact' : ''}">
+          ${optionsHTML}
+        </div>
+
+        ${expHTML}
+      </div>
+
+      <div class="nav-bar">
+        <button class="btn btn-secondary" onclick="app.prevQuestion()" ${this.currentIndex === 0 ? "disabled" : ""}>⬅ Câu trước</button>
+        ${this.mode === "exam" && !this.examSubmitted ? `
+          <button class="btn btn-danger" onclick="app.submitExam()">📝 Nộp bài chấm điểm (${answeredCount}/${list.length})</button>
+        ` : ""}
+        <button class="btn btn-primary" onclick="app.nextQuestion()" ${this.currentIndex === list.length - 1 ? "disabled" : ""}>Câu tiếp ➡</button>
+      </div>
+
+      <div class="palette-card">
+        <div class="palette-title">
+          <span>BẢNG CÂU HỎI (${answeredCount}/${list.length} đã trả lời)</span>
+          <span>Chạm số để chuyển nhanh</span>
+        </div>
+        <div class="palette-grid">
+          ${paletteHTML}
+        </div>
+      </div>
+    `;
+  }
+};
+
+window.addEventListener("DOMContentLoaded", () => app.init());
+</script>
+</body>
+</html>
